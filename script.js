@@ -9,7 +9,10 @@ let elem1;
 function stater(){  
     timeInterval=setInterval(function(){
         if (elem2 >= 0) {
-        document.getElementById('text2').innerHTML=`00m:${elem2}s`;
+       let hour=Math.floor(elem2 / 3600); // In this down three lines are showing hours, miniuts, and second.And we use Math.floor() method -
+          let miniuts=Math.floor((elem2 -(3600*hour))/60); // for remove the decimals points on our result.
+          let second=Math.floor(elem2 - (3600*hour) - (miniuts*60));
+        document.getElementById('text2').innerHTML=`${hour}h:${miniuts}m:${second}s`;
         elem2=elem2-1;
         }
           else if(elem2 < 0){
@@ -46,8 +49,11 @@ functio  will run */
 //The function is for set Time Out button as well as Resume button for Resume the setTimeOut(countdown);
   function timer(){
     var timeOut=setTimeout(function(){
-        if (elem1 >= 0 && pause==false) {
-            document.getElementById('text1').innerHTML=`00m:${elem1}s`; // Here we just assign the elem1 value in the first div at text1 field.
+     if (elem1 >= 0 && pause==false) {
+          let hour=Math.floor(elem1 / 3600);
+          let miniuts=Math.floor((elem1 -(3600*hour))/60);
+          let second=Math.floor(elem1 - (3600*hour) - (miniuts*60));
+        document.getElementById('text1').innerHTML=`${hour}h:${miniuts}m:${second}s`;// Here we just assign the elem1 value in the first div at text1 field.
             elem1=elem1-1; // Here we decrease the elem1 value by 1 whenever the if() condition is run.
             timer(); // Here we used recursion method means whenever the if() condition is satisfy it call the timer() -
         }            // function for creating a loop and using this method we run the countdown.
