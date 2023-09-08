@@ -1,0 +1,41 @@
+body{
+    background:linear-gradient(105deg,lightgreen,rgb(236, 122, 122));
+}
+#background{
+    margin-top: 12vh;
+    width: 40%;
+    height: 75vh;
+    background:linear-gradient(60deg,lightblue,rgb(222, 248, 77));
+    display: grid;
+    place-items: center;
+    margin-left: 30%;
+}
+.set{
+    width: 165px;
+    height: 25px;
+    background: black;
+    color: white;
+}
+span{
+    text-align: end;
+    width:20vh;
+    height: 6vh;
+    background-color: rgb(235, 168, 23);
+    border-radius: 3px;
+}
+.section{
+    width: 20vh;
+    height: 6vh;
+    background: darkcyan;
+    color: black;
+    margin-left: 2.5vh;
+    cursor: pointer;
+}
+input{
+    background: linear-gradient(125deg,rgb(208, 90, 231),lightblue);
+    width: 65vh;
+    height: 6vh;
+}
+.section:hover{
+    background: rgb(39, 194, 241);
+}
